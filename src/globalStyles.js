@@ -42,6 +42,10 @@ const GlobalStyle = createGlobalStyle`
 
   /* css globals */
   /* =========== */
+  :root {
+    --main-font: 'Raleway', sans-serif;
+  }
+
   body,
   h1,
   h2,
@@ -54,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
   ul,
   label {
     font-weight: normal;
-    font-family: sans-serif;
+    font-family: var(--main-font);
     color: #000000;
   }
   /* end css globals */
