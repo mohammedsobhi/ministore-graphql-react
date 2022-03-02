@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     margin: 0;
+    padding: 0;
   }
 
   html{
@@ -65,6 +66,15 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-family: var(--main-font);
     color: var(--c-text);
+  }
+
+  ol,
+  ul {
+  list-style: none;
+  }
+
+  a{
+    text-decoration: none;
   }
   /* end css globals */
 
