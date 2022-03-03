@@ -1,5 +1,4 @@
 import {
-  MenuContainer,
   NavbarContainer,
   Menu,
   MenuItem,
@@ -14,7 +13,7 @@ import { Link } from "react-router-dom";
 export const NavBar = () => {
   return (
     <NavbarContainer>
-      <MenuContainer>
+      <div>
         <Menu>
           <MenuItem>
             <Link to="/">Women</Link>
@@ -26,16 +25,16 @@ export const NavBar = () => {
             <Link to="/">Kids</Link>
           </MenuItem>
         </Menu>
-      </MenuContainer>
+      </div>
       <LogoContainer>
         <Logo src={process.env.PUBLIC_URL + "/a-logo.svg"} />
       </LogoContainer>
-      <MenuContainer>
+      <div>
         <Menu>
           <DropDown />
           <CartIcon src={Cart} />
         </Menu>
-      </MenuContainer>
+      </div>
     </NavbarContainer>
   );
 };

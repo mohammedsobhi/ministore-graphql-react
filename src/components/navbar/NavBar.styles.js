@@ -11,10 +11,6 @@ export const NavbarContainer = styled.nav`
   }
 `;
 
-export const MenuContainer = styled.div`
-  /* height: 100%; */
-`;
-
 export const Menu = styled.ul`
   display: flex;
 `;
