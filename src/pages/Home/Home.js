@@ -1,8 +1,14 @@
+import { Container } from "../../components/container/Container";
+import { HomeTitle } from "./Home.styles";
+
 const Home = () => {
   return (
-    <div>
-      <h1>ministore</h1>
-    </div>
+    <Container>
+      <h1 className="visually-hidden">MiniStore</h1>
+      <header>
+        <HomeTitle>Category name</HomeTitle>
+      </header>
+    </Container>
   );
 };
 

@@ -7,9 +7,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <header>
-        <NavBar />
-      </header>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
