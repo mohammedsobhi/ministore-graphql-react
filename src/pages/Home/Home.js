@@ -1,4 +1,5 @@
 import { Container } from "../../components/container/Container";
+import { ProductsContainer } from "../../components/productsContainer/ProductsContainer";
 import { HomeTitle } from "./Home.styles";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <header>
         <HomeTitle>Category name</HomeTitle>
       </header>
+      <ProductsContainer />
     </Container>
   );
 };
