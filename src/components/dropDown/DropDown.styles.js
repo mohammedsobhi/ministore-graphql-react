@@ -27,6 +27,8 @@ export const DropDownListContainer = styled.div`
   position: absolute;
   left: -20px;
   top: 35px;
+  /* background-color: #ffffff; */
+  z-index: 1000;
 `;
 
 export const DropDownList = styled.ul`

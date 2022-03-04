@@ -29,17 +29,35 @@ export const DropDown = () => {
     setIsOpen(false);
   };
 
+  // (Accessability) handel clicking enter on the dropdown header and items
+  // so the user can navigate using keyboard
+  const handleEnter = (event, option) => {
+    if (event.key.toLowerCase() === "enter") {
+      if (option) {
+        setSelectedOption(option);
+        setIsOpen(false);
+      } else {
+        toggling();
+      }
+    }
+  };
+
   return (
     <DropDownContainer ref={ref}>
-      <DropDownHeader onClick={toggling}>
-        {selectedOption.slice(0, 2) || "$"}
+      <DropDownHeader onClick={toggling} tabIndex="0" onKeyDown={handleEnter}>
+        {selectedOption.slice(0, 2) || "$ "}
         <Arrow src={DownArrow} state={isOpen} />
       </DropDownHeader>
       {isOpen && (
         <DropDownListContainer>
           <DropDownList>
             {options.map((option, index) => (
-              <ListItem onClick={onOptionClicked(option)} key={index}>
+              <ListItem
+                onClick={onOptionClicked(option)}
+                onKeyDown={(event) => handleEnter(event, option)}
+                key={index}
+                tabIndex="0"
+              >
                 {option}
               </ListItem>
             ))}
